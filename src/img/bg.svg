@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="653px" height="518px" viewBox="0 0 653 518" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Artboard</title>
+    <defs>
+        <linearGradient x1="53.2789166%" y1="80.1367558%" x2="35.8439075%" y2="21.5727783%" id="linearGradient-1">
+            <stop stop-color="#47EDFF" offset="0%"></stop>
+            <stop stop-color="#00CBF9" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="22.0155759%" y1="11.5769973%" x2="71.2792166%" y2="85.2786478%" id="linearGradient-2">
+            <stop stop-color="#FAF18055" offset="0%"></stop>
+            <stop stop-color="#FFE000" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="44.7904845%" y1="46.2852952%" x2="84.1710872%" y2="60.3243658%" id="linearGradient-3">
+            <stop stop-color="#FF00EDbb" offset="0%"></stop>
+            <stop stop-color="#D500B3" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <polygon id="Path-2" fill="url(#linearGradient-1)" transform="translate(410.000000, 298.500000) rotate(-65.000000) translate(-410.000000, -298.500000) " points="149 -132 671 729 420.545701 729"></polygon>
+        <polygon id="Path-2" fill="url(#linearGradient-2)" transform="translate(285.000000, 443.000000) scale(-1, 1) rotate(-68.000000) translate(-285.000000, -443.000000) " points="-122 45 692 841 301.444829 841"></polygon>
+        <polygon id="Path-2" fill="url(#linearGradient-3)" transform="translate(514.000000, 169.000000) scale(-1, -1) rotate(45.000000) translate(-514.000000, -169.000000) " points="136 -49 892 387 872.790522 108.06782"></polygon>
+    </g>
+</svg>
