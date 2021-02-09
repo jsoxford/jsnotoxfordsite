@@ -15,3 +15,9 @@
     from = "/feed/"
     to = "/feed/feed.xml"
     status = 200
+
+  [[redirects]]
+    from = "http://not.jsoxford.com/*"
+    to = "https://not.jsoxford.com/:splat"
+    status = 301
+    force = true
