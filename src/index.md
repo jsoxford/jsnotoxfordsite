@@ -1,6 +1,6 @@
 ---
 layout: event.njk
-title: 10th February @ 7pm
+title: 10th February @ 7pm GMT
 description: An evening of Kubernetes and Coaching
 ---
 
