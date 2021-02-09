@@ -4,6 +4,8 @@ title: 10th February @ 7pm
 description: An evening of Kubernetes and Coaching
 ---
 
+### [We'll post the video here when we go live]
+
 🤟 This month, we've got
 
 - [Marcus](https://twitter.com/Marcus_Noble_) here to tell us everything about Kubernetes
