@@ -45,12 +45,6 @@ p {
 }
 
 article {
-  > ul,
-  > ol {
-    > li + li {
-      margin-top: 1rem;
-    }
-  }
 
   * {
     + h2 {
@@ -65,10 +59,6 @@ article {
 
 strong {
   font-weight: $tdbc-strong-font-weight;
-}
-
-a:not(.tdbc-button) {
-  color: $tdbc-link-color;
 }
 
 code:not([class*="language"]) {
