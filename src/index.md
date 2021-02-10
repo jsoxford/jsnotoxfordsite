@@ -1,6 +1,7 @@
 ---
 layout: event.njk
 title: 10th February @ 7pm GMT
+datetime: 2021-02-10T19:00:00Z
 description: An evening of Kubernetes and Coaching
 ---
 

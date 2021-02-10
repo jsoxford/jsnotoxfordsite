@@ -3,7 +3,20 @@ layout: base.njk
 ---
 
 <header class="maybenot">
-  <h1>{{ title }}</h1>
+  <h1><script>
+document.currentScript.replaceWith(
+  document.createTextNode(
+    new Intl.DateTimeFormat('default', {
+      month: 'long',
+      day: 'numeric',
+      hour: 'numeric',
+      hour12: true,
+      timeZoneName: 'short'
+    })
+    .format(new Date("{{ datetime }}"))
+  )
+)
+</script></h1>
   <h2>{{ description }}</h2>
 </header>
 
