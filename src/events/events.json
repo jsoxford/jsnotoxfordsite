@@ -1,0 +1,6 @@
+{
+    "tags": "events",
+    "layout": "event",
+    "permalink": "/event/{{ page.fileSlug }}/"
+  }
+  

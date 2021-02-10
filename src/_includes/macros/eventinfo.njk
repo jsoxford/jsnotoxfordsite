@@ -1,0 +1,57 @@
+{% macro eventInfo(event, content) %} 
+<header>
+    <h1>
+        <time datetime="{{ event.date }}">
+            <script>
+            document.currentScript.replaceWith(
+                document.createTextNode(
+                    new Intl.DateTimeFormat('default', {
+                    month: 'long',
+                    day: 'numeric',
+                    hour: 'numeric',
+                    hour12: true,
+                    timeZoneName: 'short'
+                    })
+                    .format(new Date("{{ event.date }}"))
+                )
+            )
+            </script>
+        </time>
+    </h1>
+    <h2>{{ event.description }}</h2>
+</header>
+{% if event.stream %}
+    {% if event.date | occured %}
+    <p>It was ✨ Broadcast Live ✨ on the ✨ Information Superhighway ✨</p>
+    {% endif %}
+    <div class="videoWrapper">
+    <iframe width="1120" height="630" src="{{ event.stream }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+{% else %}
+    <h3>[We'll post the video here when we go live]</h3>
+{% endif %}
+<p>🤟 This month, {% if event.date | occured %}we had{% else %}we've got{% endif %}</p>
+{% if event.speakers %}
+<ul>
+{% for speaker in event.speakers %}
+    <li>{% if speaker.twitter %}<a href="https://twitter.com/{{ speaker.twitter }}" target="_blank">{{ speaker.who }}</a>{% else %}{{ speaker.who }}{% endif %} telling us about {{ speaker.what | safe }}</li>
+{% endfor %}
+</ul>
+{% endif %}
+{{ content | safe }}
+{% endmacro %}
+
+{% macro previousEvents(events) %}
+
+{% if events %}
+    <h3>Previously</h3>
+    <ul class="events">
+    {% for event in events %}
+        <li>
+            <small>{{ event.data.date | mmyyyy }}</small>
+            <a href="{{ event.url }}">{{ event.data.description | safe }}</a>
+        </li>
+    {% endfor %}
+    </ul>
+{% endif %}
+{% endmacro %}

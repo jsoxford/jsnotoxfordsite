@@ -1,5 +1,5 @@
 ---
-layout: event.njk
+layout: page
 title: Code of Conduct
 description: For all JSNotOxford events
 ---

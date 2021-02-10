@@ -1,0 +1,10 @@
+---
+layout: page
+---
+{% set all_events = collections.events | reverse %}
+{% set next_event = all_events[0] %}
+{% set previous_events = all_events | from(1) %}
+{% from 'macros/eventinfo.njk' import eventInfo,previousEvents %}
+
+{{ eventInfo(next_event.data, next_event.templateContent) }}
+{{ previousEvents(previous_events) }}
