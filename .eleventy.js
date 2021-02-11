@@ -6,6 +6,11 @@ const pluginRss = require("@11ty/eleventy-plugin-rss");
 const markdownIt = require("markdown-it");
 const packageVersion = require("./package.json").version;
 
+let ytEmbed = /https?:\/\/www\.youtube\.com\/embed\/([\w-]{11})/i
+let ytNoCookieEmbed = /https?:\/\/www\.youtube\-nocookie\.com\/embed\/([\w-]{11})/i
+let ytWatch = /https?:\/\/www\.youtube\.com\/watch\?vi?=([\w-]{11})/i
+let ytShort = /https?:\/\/youtu\.be\/([\w-]{11})/i
+
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(socialImages);
   eleventyConfig.addPlugin(syntaxHighlight);
@@ -56,6 +61,31 @@ module.exports = function (eleventyConfig) {
       replacement: "-",
       remove: /[*+~·,()'"`´%!?¿:@\/]/g,
     });
+  });
+
+  // Turn any kind of youtube sharing link into a video wrapped iframe embed link pointing at
+  // the nocookie version.
+  eleventyConfig.addShortcode("yt", (str) => {
+    let id = ""
+    if ((match = str.match(ytNoCookieEmbed)) !== null) {
+      // is it a nocookie youtube embed link? like https://www.youtube-nocookie.com/embed/ps_UUldWqHY
+      id = match[1];
+    } else if ((match = str.match(ytEmbed)) !== null) {
+      // is this an embed link without the nocookie part? like https://www.youtube.com/embed/ps_UUldWqHY
+      id = match[1];
+    } else if ((match = str.match(ytWatch)) !== null) {
+      // is it a youtube watch link? like https://www.youtube.com/?v=ps_UUldWqHY
+      id = match[1];
+    } else if ((match = str.match(ytShort)) !== null) {
+      // is it a short youtube link? like https://youtu.be/ps_UUldWqHY
+      id = match[1];
+    } else {
+      return "";
+    }
+
+    return `<div class="videoWrapper">
+      <iframe width="1120" height="630" src="https://www.youtube-nocookie.com/embed/${id}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>`
   });
 
   /* Markdown Overrides */
