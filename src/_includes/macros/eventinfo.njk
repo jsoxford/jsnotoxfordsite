@@ -21,15 +21,19 @@
     <h2>{{ event.description }}</h2>
 </header>
 {% if event.stream %}
-    {% if event.date | occured %}
+    {% if event.happened == true %}
     <p>It was ✨ Broadcast Live ✨ on the ✨ Information Superhighway ✨</p>
+    {% else %}
+        {% if event.date | occurred %}
+            <p>Currently live 📣</p>
+        {% endif %}
     {% endif %}
 
     {% yt event.stream %}
 {% else %}
     <h3>[We'll post the video here when we go live]</h3>
 {% endif %}
-<p>🤟 This month, {% if event.date | occured %}we had{% else %}we've got{% endif %}</p>
+<p>🤟 This month, {% if event.happened %}we had{% else %}we've got{% endif %}</p>
 {% if event.speakers %}
 <ul>
 {% for speaker in event.speakers %}
