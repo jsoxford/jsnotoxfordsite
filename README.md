@@ -6,6 +6,8 @@ Site source for https://not.jsoxford.com, a maybe js, not oxford series of onlin
 
 Hosted on Netlify.
 
+The repository is also subject to the code of conduct we have here: https://not.jsoxford.com/coc/ :)
+
 ## Development Scripts
 
 After you clone the repository, run these:
