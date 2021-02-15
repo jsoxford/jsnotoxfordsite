@@ -1,41 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-{%- set pageTitle %}{% if title %}{{ title }} | {% endif %}{{ meta.siteName }}{% endset -%}
-{%- set pageDescription %}{% if description %}{{ description }}{% else %}{{ meta.siteDescription }}{% endif %}{% endset -%}
   <head>
-    <!-- Generated from the 11ty Netlify Jumpstart: https://github.com/5t3ph/11ty-netlify-jumpstart -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{{pageTitle}}</title>
-    <meta
-      name="description"
-      content="{{pageDescription}}"
-    />
     <link rel="icon" href="{{ '/favicon.png' | url }}" />
     <link href="{{ '/css/style.css' | url }}" rel="stylesheet" />
+
     <meta name="twitter:card" content="summary_large_image" />
     {% if meta.twitterUsername %}
     <meta name="twitter:creator" content="@{{ meta.twitterUsername }}" />
     {% endif %}
-    <meta
-      name="twitter:title"
-      content="{{pageTitle}}"
-    />
-    <meta
-      name="twitter:description"
-      content="{{pageDescription}}"
-    />
-
+    
+    {%- set pageTitle %}{% if title %}{{ title }} | {% else %}{% if description %}{{ description | safe}} | {% endif %}{% endif %}{{ meta.siteName }}{% endset -%}
+    <title>{{pageTitle}}</title>
     <meta
       name="og:title"
       content="{{pageTitle}}"
     />
     <meta
+      name="twitter:title"
+      content="{{pageTitle}}"
+    />
+
+    {%- set pageDescription %}{% if description %}{{ description }}{% else %}{{ meta.siteDescription }}{% endif %}{% endset -%}
+    <meta
+      name="description"
+      content="{{pageDescription}}"
+    />
+    <meta
       name="og:description"
       content="{{pageDescription}}"
     />
-    <meta property="og:image" content="{{pageSocialImg}}" />
-    <meta name="twitter:image" content="{{pageSocialImg}}" />
+    <meta
+      name="twitter:description"
+      content="{{pageDescription}}"
+    />
+    
     {%- set pageSocialImg %}/previews/{% if previewslug %}{{ previewslug }}{% else %}{{ page.fileSlug }}{% endif %}.png{% endset -%}
     <meta property="og:image" content="{{ pageSocialImg | url }}" />
     <meta name="twitter:image" content="{{ pageSocialImg | url }}" />
