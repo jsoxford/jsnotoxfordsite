@@ -2,6 +2,7 @@
 layout: page
 title: Code of Conduct
 description: For all JSNotOxford events
+previewslug: code-of-conduct
 ---
 
 All attendees, speakers, sponsors, volunteers and organisers at our meetup group and online interactions are required to agree with the following code of conduct. Organizers will enforce this code throughout the event. We are expecting cooperation from all participants to help ensure a safe environment for everybody.

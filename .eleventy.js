@@ -47,6 +47,18 @@ module.exports = function (eleventyConfig) {
     return dateToCheck < today;
   });
 
+  // Filter to format the date in the same way we're doing it clientside, to be used in places
+  eleventyConfig.addFilter("formatTheDate", (date) => {
+    return new Intl.DateTimeFormat('default', {
+      month: 'long',
+      day: 'numeric',
+      hour: 'numeric',
+      hour12: true,
+      timeZoneName: 'short'
+      })
+      .format(new Date(date))
+  })
+
   eleventyConfig.addFilter("slug", (str) => {
     if (!str) {
       return;

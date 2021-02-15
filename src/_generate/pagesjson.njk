@@ -3,9 +3,22 @@ permalink: ./social/pages.json
 permalinkBypassOutputDir: true
 eleventyExcludeFromCollections: true
 ---
-[{% for pages in collections.all %}
+{# Generate image for the home page #}
+[
+{# Generate image for other pages #}
+{% for pages in collections.all %}
+   {% if pages.data.previewslug or pages.data.title %}
+      {
+      "title":"{{ pages.data.title | addNbsp | safe }}",
+      "imgName":"{% if pages.data.previewslug %}{{ pages.data.previewslug }}{% else %}{{ pages.data.title | slug }}{% endif %}"
+      },
+   {% endif %}
+{% endfor %}
+{# Generate image for the events #}
+{% for event in collections.events %}
 	{
-   "title":"{% if pages.data.title %}{{ pages.data.title | addNbsp | safe }}{% else %}{{ meta.siteName }}{% endif %}",
-   "imgName":"{% if pages.data.title %}{{ pages.data.title | slug}}{% else %}home{% endif %}"
+   "title":"{{ event.date | formatTheDate }}",
+   "imgName":"{{ event.fileSlug | slug }}"
 	}{% if loop.last == false %},{% endif %}
-{% endfor %}] 
+{% endfor %}
+] 
