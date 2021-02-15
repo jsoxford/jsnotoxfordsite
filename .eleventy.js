@@ -40,8 +40,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("from", (array, from) => {
     return array.slice(from, array.length);
   });
-  // Check if a date has occured
-  eleventyConfig.addFilter("occured", (date) => {
+  // Check if a date has occurred
+  eleventyConfig.addFilter("occurred", (date) => {
     let dateToCheck = new Date(date);
     let today = new Date();
     return dateToCheck < today;

@@ -4,4 +4,10 @@ layout: base
 
 {% from 'macros/eventinfo.njk' import eventInfo %}
 
-{{ eventInfo({date:date,speakers:speakers,stream:stream,description:description}, layoutContent) }}
+{{ eventInfo({
+    date:date,
+    speakers:speakers,
+    stream:stream,
+    description:description,
+    happened:happened
+}, layoutContent) }}
