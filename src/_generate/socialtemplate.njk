@@ -8,22 +8,14 @@ eleventyExcludeFromCollections: true
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      {% raw %}{{ style }}{% endraw %} 
-    </style>
+    <link rel="stylesheet" href="style.css" />
+    <style>{% raw %}{{ style }}{% endraw %} </style>
   </head>
   <body>
-    <header>
-      <div>
-        <h1></h1>
-        <p>
-          <em>Published on</em>&nbsp;&nbsp;<strong>{{ meta.siteName }}</strong>
-        </p>
-      </div>
-    </header>
+    <div class="text">
+      <div id="line1">Not</div>
+      <div id="line2">JSOxford</div>
+      <h1 id="line3">{{ title }}</h1>
+    </div> 
   </body>
 </html>

@@ -1,7 +1,8 @@
 ---
 layout: page
 title: Code of Conduct
-description: For all JSNotOxford events
+description: For all NotJSOxford events
+previewslug: code-of-conduct
 ---
 
 All attendees, speakers, sponsors, volunteers and organisers at our meetup group and online interactions are required to agree with the following code of conduct. Organizers will enforce this code throughout the event. We are expecting cooperation from all participants to help ensure a safe environment for everybody.
@@ -10,7 +11,7 @@ All attendees, speakers, sponsors, volunteers and organisers at our meetup group
 
 ## Need Help?
 
-JSNotOxford is organised by the same team that runs JSOxford: <a href="https://twitter.com/benjaminbenben/">Ben</a>, <a href="https://twitter.com/ninjanails">Seren</a>, and <a href="https://twitter.com/spikeheap">Ryan</a>. You can contact any of us directly either through Twitter, Slack or by grabbing us in person. You can also DM the <a href="https://twitter.com/jsoxford">JSOxford</a> twitter account or email us at <a href="mailto:organisers@jsoxford.com">organisers@jsoxford.com</a>.
+NotJSOxford is organised by the same team that runs JSOxford: <a href="https://twitter.com/benjaminbenben/">Ben</a>, <a href="https://twitter.com/ninjanails">Seren</a>, and <a href="https://twitter.com/spikeheap">Ryan</a>. You can contact any of us directly either through Twitter, Slack or by grabbing us in person. You can also DM the <a href="https://twitter.com/jsoxford">JSOxford</a> twitter account or email us at <a href="mailto:organisers@jsoxford.com">organisers@jsoxford.com</a>.
 
 ## The quick version
 
