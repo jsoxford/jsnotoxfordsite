@@ -1,4 +1,4 @@
-# jsnotoxford
+# NotJSOxford
 
 Site source for https://not.jsoxford.com, a maybe js, not oxford series of online livestreamed zoom group chats about various topics.
 
