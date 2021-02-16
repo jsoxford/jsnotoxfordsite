@@ -8,52 +8,14 @@ eleventyExcludeFromCollections: true
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <style>
-    @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,400;1,700&amp;display=swap');
-    body { 
-      /* This is actually the bg.svg from the main site, base64 encoded so it can be used for the site-preview image generation */
-      background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCjxzdmcgd2lkdGg9IjY1M3B4IiBoZWlnaHQ9IjUxOHB4IiB2aWV3Qm94PSIwIDAgNjUzIDUxOCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4NCiAgICA8dGl0bGU+QXJ0Ym9hcmQ8L3RpdGxlPg0KICAgIDxkZWZzPg0KICAgICAgICA8bGluZWFyR3JhZGllbnQgeDE9IjUzLjI3ODkxNjYlIiB5MT0iODAuMTM2NzU1OCUiIHgyPSIzNS44NDM5MDc1JSIgeTI9IjIxLjU3Mjc3ODMlIiBpZD0ibGluZWFyR3JhZGllbnQtMSI+DQogICAgICAgICAgICA8c3RvcCBzdG9wLWNvbG9yPSIjNDdFREZGIiBvZmZzZXQ9IjAlIj48L3N0b3A+DQogICAgICAgICAgICA8c3RvcCBzdG9wLWNvbG9yPSIjMDBDQkY5IiBvZmZzZXQ9IjEwMCUiPjwvc3RvcD4NCiAgICAgICAgPC9saW5lYXJHcmFkaWVudD4NCiAgICAgICAgPGxpbmVhckdyYWRpZW50IHgxPSIyMi4wMTU1NzU5JSIgeTE9IjExLjU3Njk5NzMlIiB4Mj0iNzEuMjc5MjE2NiUiIHkyPSI4NS4yNzg2NDc4JSIgaWQ9ImxpbmVhckdyYWRpZW50LTIiPg0KICAgICAgICAgICAgPHN0b3Agc3RvcC1jb2xvcj0iI0ZBRjE4MDU1IiBvZmZzZXQ9IjAlIj48L3N0b3A+DQogICAgICAgICAgICA8c3RvcCBzdG9wLWNvbG9yPSIjRkZFMDAwIiBvZmZzZXQ9IjEwMCUiPjwvc3RvcD4NCiAgICAgICAgPC9saW5lYXJHcmFkaWVudD4NCiAgICAgICAgPGxpbmVhckdyYWRpZW50IHgxPSI0NC43OTA0ODQ1JSIgeTE9IjQ2LjI4NTI5NTIlIiB4Mj0iODQuMTcxMDg3MiUiIHkyPSI2MC4zMjQzNjU4JSIgaWQ9ImxpbmVhckdyYWRpZW50LTMiPg0KICAgICAgICAgICAgPHN0b3Agc3RvcC1jb2xvcj0iI0ZGMDBFRGJiIiBvZmZzZXQ9IjAlIj48L3N0b3A+DQogICAgICAgICAgICA8c3RvcCBzdG9wLWNvbG9yPSIjRDUwMEIzIiBvZmZzZXQ9IjEwMCUiPjwvc3RvcD4NCiAgICAgICAgPC9saW5lYXJHcmFkaWVudD4NCiAgICA8L2RlZnM+DQogICAgPGcgaWQ9IkFydGJvYXJkIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4NCiAgICAgICAgPHBvbHlnb24gaWQ9IlBhdGgtMiIgZmlsbD0idXJsKCNsaW5lYXJHcmFkaWVudC0xKSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNDEwLjAwMDAwMCwgMjk4LjUwMDAwMCkgcm90YXRlKC02NS4wMDAwMDApIHRyYW5zbGF0ZSgtNDEwLjAwMDAwMCwgLTI5OC41MDAwMDApICIgcG9pbnRzPSIxNDkgLTEzMiA2NzEgNzI5IDQyMC41NDU3MDEgNzI5Ij48L3BvbHlnb24+DQogICAgICAgIDxwb2x5Z29uIGlkPSJQYXRoLTIiIGZpbGw9InVybCgjbGluZWFyR3JhZGllbnQtMikiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDI4NS4wMDAwMDAsIDQ0My4wMDAwMDApIHNjYWxlKC0xLCAxKSByb3RhdGUoLTY4LjAwMDAwMCkgdHJhbnNsYXRlKC0yODUuMDAwMDAwLCAtNDQzLjAwMDAwMCkgIiBwb2ludHM9Ii0xMjIgNDUgNjkyIDg0MSAzMDEuNDQ0ODI5IDg0MSI+PC9wb2x5Z29uPg0KICAgICAgICA8cG9seWdvbiBpZD0iUGF0aC0yIiBmaWxsPSJ1cmwoI2xpbmVhckdyYWRpZW50LTMpIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg1MTQuMDAwMDAwLCAxNjkuMDAwMDAwKSBzY2FsZSgtMSwgLTEpIHJvdGF0ZSg0NS4wMDAwMDApIHRyYW5zbGF0ZSgtNTE0LjAwMDAwMCwgLTE2OS4wMDAwMDApICIgcG9pbnRzPSIxMzYgLTQ5IDg5MiAzODcgODcyLjc5MDUyMiAxMDguMDY3ODIiPjwvcG9seWdvbj4NCiAgICA8L2c+DQo8L3N2Zz4=");
-      background-color: #20fea1;
-      background-size: 120% 120%;
-      background-repeat: no-repeat;
-      background-position: 50% 50%;
-      background-attachment: fixed;
-      margin: 0; 
-      padding: 0; 
-      padding-left: 6vw;
-      display: flex; 
-      min-height: 100vh; 
-      width: 100%; 
-      justify-content: flex-start; 
-      align-items: center;
-      box-sizing: border-box;
-    }
-    .text {
-      font-family: Fira Sans;
-      font-size: 12vw;
-      font-weight: 400;
-      font-style: italic;
-    }
-    #line1 {
-      font-weight: 700;
-    }
-    #line2 {
-
-    }
-    #line3 {
-      font-size: 6vw;
-      font-style: normal;
-      margin: 0;
-      padding: 0;
-      font-weight: inherit;
-    }
-    </style>
+    <link rel="stylesheet" href="style.css" />
+    <style>{% raw %}{{ style }}{% endraw %} </style>
   </head>
   <body>
     <div class="text">
       <div id="line1">Not</div>
       <div id="line2">JSOxford</div>
-      <h1 id="line3">{{ dateline }}</h1>
+      <h1 id="line3">{{ title }}</h1>
     </div> 
   </body>
 </html>
